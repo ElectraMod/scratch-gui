@@ -1,0 +1,113 @@
+@import "../../css/colors.css";
+@import "../../css/z-index.css";
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: $z-index-loader;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $motion-primary;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    color: white;
+}
+[theme="dark"] .background {
+    background-color: $motion-primary-dark;
+}
+
+.fullscreen {
+    /* Break out of the layout using position: fixed to cover the whole screen */
+    position: fixed;
+    /* Use the fullscreen stage z-index to allow covering full-screen mode */
+    z-index: $z-index-stage-wrapper-overlay;
+}
+
+.block-animation {
+    width: 125px;
+    height: 150px;
+    margin: 50px auto 0px;
+}
+
+.block-animation img {
+    display: block;
+    position: relative;
+    margin-top: -4px;
+    animation-name: bouncing;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-delay: 0s;
+}
+
+@keyframes bouncing {
+  0% {
+      left: 0;
+      top: 0;
+      transform: rotate(0deg);
+      animation-timing-function: ease-out;
+  }
+  25% {
+      left: 10px;
+      top: -50px;
+      transform: rotate(10deg);
+      animation-timing-function: ease-in;
+  }
+  50% {
+      left: 0;
+      top: 0;
+      transform: rotate(0deg);
+      animation-timing-function: ease-out;
+  }
+  75% {
+      left: -10px;
+      top: -50px;
+      transform: rotate(-10deg);
+      animation-timing-function: ease-in;
+  }
+  100% {
+      left: 0;
+      top: 0;
+      transform: rotate(0deg);
+  }
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0.75rem 0;
+}
+
+.message-container-outer {
+    height: 30px;
+    overflow: hidden;
+}
+
+.message-container-inner {
+    transition: transform 0.5s;
+}
+
+.message {
+    height: 20px;
+    margin: 5px 0;
+}
+
+.tw-progress-outer {
+    position: relative;
+    width: 250px;
+    height: 5px;
+    border: 1px solid white;
+    margin: auto;
+}
+.tw-progress-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: white;
+}

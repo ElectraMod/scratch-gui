@@ -1,0 +1,20 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120.21715" height="124.73492" viewBox="0,0,120.21715,124.73492" class="img-fluid">
+    <g transform="translate(-179.89143,-117.63254)">
+      <g data-paper-data="{&quot;isPaintingLayer&quot;:true}" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" style="mix-blend-mode: normal">
+        <path d="M186.02941,212.84658l3.96912,-44.6333l70.50485,-38.30458l39.6052,20.95981l-24.1653,91.49894z" fill-opacity="0.2" fill="#000000"></path>
+        <g>
+          <path d="M179.89143,200.57048l3.96912,-44.6333l70.50485,-38.30458l39.6052,20.95981l-24.1653,91.49894z" fill="#dc6161"></path>
+          <g fill="#faaaaa">
+            <path d="M183.8611,155.93687l34.05653,23.97594l-38.02565,20.65895z"></path>
+            <path d="M254.3655,117.63254l1.57799,41.6212l-36.83164,-22.46825z"></path>
+            <path d="M255.9435,159.25374l13.8604,70.83743l-51.88626,-50.17836z"></path>
+          </g>
+          <g fill="#e87878">
+            <path d="M254.3655,117.63254l39.60364,20.96225l-38.02565,20.65895z"></path>
+            <path d="M219.11186,136.78549l36.83164,22.46825l-38.02587,20.65907z"></path>
+            <path d="M217.91763,179.91281l51.88626,50.17836l-89.91191,-29.5194z"></path>
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
