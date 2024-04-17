@@ -194,15 +194,15 @@ class CustomProcedures extends React.Component {
         if (this.mutationRoot) {
             const newReturns = !this.mutationRoot.getReturns();
             this.mutationRoot.setReturns(newReturns);
-            this.handleChangeType({target: {value: newReturns ? 'string' : 'statement'}})
+            this.handleChangeType(newReturns ? 'string' : 'statement');
             this.setState({returns: newReturns});
         }
     }
-    handleChangeType (element) {
+    handleChangeType (value) {
         if (this.mutationRoot) {
-            const newType = element.target.value
-            this.mutationRoot.setType(newType)
-            this.setState({type: newType})
+            const newType = value;
+            this.mutationRoot.setType(newType);
+            this.setState({type: newType});
         }
     }
     handleBlockColorChange (element) {

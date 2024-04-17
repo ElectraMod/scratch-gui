@@ -10,7 +10,10 @@ const manifest = {
     {
       "name": "TheColaber",
       "link": "https://scratch.mit.edu/users/TheColaber/"
-    }
+    },
+    {
+      "name": "JeremyGamer13"
+    },
   ],
   "tags": [
     "recommended"
@@ -50,12 +53,32 @@ const manifest = {
       "min": 1,
       "max": 100,
       "default": 40
+    },
+    {
+      "name": "Max Search Results",
+      "id": "popup_max_search",
+      "type": "integer",
+      "min": 1,
+      "max": 1000,
+      "default": 100
+    },
+    {
+      "name": "Max Object Variants",
+      "id": "popup_max_variants",
+      "type": "integer",
+      "min": 1,
+      "max": 1000,
+      "default": 7
     }
   ],
   "info": [
     {
       "text": "This addon was previously part of the \"developer tools\" addon but has moved here.",
       "id": "developer-tools"
+    },
+    {
+      "text": "Changing the \"Max Object Variants\" will limit the amount of results that just use a different costume, sprite, sound or menu option selected in the block.",
+      "id": "maxObjectVariants"
     }
   ]
 };

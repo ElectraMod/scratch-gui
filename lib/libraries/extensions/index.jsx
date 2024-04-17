@@ -150,7 +150,9 @@ import jgAnimationExtensionIcon from './penguinmod/extensions/animation.png';
 import typeScratchExtensionIcon from './snail-ide/typescript.svg';
 import blocklyIconURL from './blockly/blockly.png';
 import LppExtensionIcon from './lpp/banner.svg';
-import KukeMCI18nIcon from './kukemc/I18n/banner.png';
+import DebuggerConsoleExtensionIcon from './electramod/debuggerconsole.svg';
+import DiscordIcon from './discord/icon.svg';
+import DiscordRPCIcon from './discord/rpc.png';
 
 // category expansions
 import pmMotionExpansionExtensionIcon from './penguinmod/extensions/motion_expanded.png';
@@ -162,6 +164,33 @@ import pmOperatorsExpansionExtensionIcon from './penguinmod/extensions/operators
 // jg: default icon if you are too lazy to make one and you want me to make one instead lololololololol
 // gsa: ololololololo
 import defaultExtensionIcon from './penguinmod/extensions/placeholder.png';
+
+// adacraft
+import adabrowserIconURL from './adabrowser/ada.png';
+import adabrowserInsetIconURL from './adabrowser/ada-icon.svg';
+
+// onegpio
+
+import onegpioArduinoImage from './onegpioArduino/onegpioArduino.png';
+import onegpioArduinoInsetIconURL from './onegpioArduino/onegpioArduino-small.png';
+
+import onegpioRpiImage from './onegpioRpi/onegpioRpi.png';
+import onegpioRpiInsetIconURL from './onegpioRpi/onegpioRpi-small.png';
+
+import onegpioEspImage from './onegpioEsp/onegpioEsp.png';
+import onegpioEspInsetIconURL from './onegpioEsp/onegpioEsp-small.png';
+
+import onegpioPicoboardImage from './onegpioPicoboard/onegpioPicoboard.jpg';
+import onegpioPicoboardInsetIconURL from './onegpioPicoboard/onegpioPicoboard-small.png';
+
+import onegpioCpxImage from './onegpioCpx/onegpioCpx.jpg';
+import onegpioCpxInsetIconURL from './onegpioCpx/onegpioCpx-small.png';
+
+import onegpioRoboHATImage from './onegpioRoboHAT/onegpioRoboHAT.png';
+import onegpioRoboHATInsetIconURL from './onegpioRoboHAT/onegpioRoboHAT-small.png';
+
+import onegpioRpiPicoImage from './onegpioRpiPico/onegpioRpiPico.png';
+import onegpioRpiPicoInsetIconURL from './onegpioRpiPico/onegpioRpiPico-small.png';
 
 const urlParams = new URLSearchParams(location.search);
 
@@ -800,6 +829,15 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Ada Browser',
+        tags: ['othermod'],
+        extensionId: 'adabrowser',
+        iconURL: adabrowserIconURL,
+        insetIconURL: adabrowserInsetIconURL,
+        description: 'Some new blocks to interact with the browser',
+        featured: true
+    },
+    {
         name: 'JavaScript',
         extensionId: 'jgJavascript',
         iconURL: jgJavascriptExtensionIcon,
@@ -813,6 +851,7 @@ const menuItems = [
         iconURL: typeScratchExtensionIcon,
         tags: ['snailide', 'programminglanguage'],
         description: 'Similar to JavaScript extension but for TypeScript.',
+        credits: 'jwklong',
         featured: true
     },
     {
@@ -824,6 +863,28 @@ const menuItems = [
         credits: 'FurryR',
         featured: true
     },
+    {
+        name: 'Debugger Console',
+        extensionId: 'https://electramod-extensions-gallery.vercel.app/extensions/Aness6040/debuggerconsole.js',
+        iconURL: DebuggerConsoleExtensionIcon,
+        tags: ['electramod'],
+        description: 'Based on Turbowarp CN\'s Debugger by NOname',
+        credits: 'Started by NOname, modified by Aness6040',
+        featured: true
+    },
+    /* {
+        name: 'Discord RPC',
+        extensionId: 'em_discordrpc',
+        iconURL: DiscordRPCIcon,
+        insetIconURL: DiscordIcon,
+        customInsetColor: '#5865F2',
+        tags: ['electramod'],
+        description: 'Discord Rich Presence for Scratch.',
+        internetConnectionRequired: true,
+        credits: 'Aness6040',
+        featured: true // ,
+        // disabled: !(IsLocal || IsLiveTests)
+    }, */
     /* {
         name: 'I18n',
         extensionId: 'kukeMCI18n',
@@ -838,6 +899,7 @@ const menuItems = [
         extensionId: 'blockly2math',
         iconURL: blocklyIconURL,
         collaborator: 'Google',
+        credits: 'jwklong',
         tags: ['snailide'],
         description: "Blockly math blocks.",
         featured: true
@@ -1051,6 +1113,136 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Scratch2WebSerialAPI',
+        extensionId: 'scratch2webserialapi',
+        iconURL: 'https://raw.githubusercontent.com/champierre/scratch2webserialapi/main/scratch-gui/src/lib/libraries/extensions/scratch2webserialapi/scratch2webserialapi.png',
+        insetIconURL: 'https://raw.githubusercontent.com/champierre/scratch2webserialapi/main/scratch-gui/src/lib/libraries/extensions/scratch2webserialapi/Icon.png',
+        collaborator: 'champierre',
+        internetConnectionRequired: true,
+        tags: ['othermod', 'hardware'],
+        description: 'Do more complex things with hardware via the serial ports.',
+        featured: true
+    },
+    {
+        name: 'scratch2maqueen',
+        extensionId: 'scratch2maqueen', // update reference once file names are updated
+        tags: ['othermod', 'hardware'],
+        bluetoothRequired: true,
+        internetConnectionRequired: true,
+        launchPeripheralConnectionFlow: true,
+        useAutoScan: true,
+        iconURL: 'https://raw.githubusercontent.com/champierre/scratch2maqueen/master/scratch-gui/src/lib/libraries/extensions/scratch2maqueen/scratch2maqueen.png',
+        insetIconURL: 'https://raw.githubusercontent.com/champierre/scratch2maqueen/master/scratch-gui/src/lib/libraries/extensions/scratch2maqueen/scratch2maqueen-small.png',
+        description: 'Control DFRobot Maqueen.',
+        featured: true,
+        collaborator: 'Vernier'
+    },
+    {
+        name: 'OneGpio Arduino',
+        extensionId: 'onegpioArduino',
+        collaborator: "Mr. Y's Lab",
+        iconURL: onegpioArduinoImage,
+        insetIconURL: onegpioArduinoInsetIconURL,
+        description: 'OneGPIOArduino',
+        tags: ['othermod', 'hardware'],
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: true,
+        bluetoothRequired: false,
+        helpLink: 'https://mryslab.github.io/s3-extend/'
+
+    },
+    {
+        name: 'OneGpio Raspberry Pi',
+        extensionId: 'onegpioRpi',
+        collaborator: "Mr. Y's Lab",
+        iconURL: onegpioRpiImage,
+        insetIconURL: onegpioRpiInsetIconURL,
+        description: 'OneGPIORpi',
+        tags: ['othermod', 'hardware'],
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: true,
+        bluetoothRequired: false,
+        helpLink: 'https://mryslab.github.io/s3-extend/'
+
+    },
+    {
+        name: 'OneGpio ESP-8266',
+        extensionId: 'onegpioEsp',
+        collaborator: "Mr. Y's Lab",
+        iconURL: onegpioEspImage,
+        insetIconURL: onegpioEspInsetIconURL,
+        description: 'OneGPIOEsp',
+        tags: ['othermod', 'hardware'],
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: true,
+        bluetoothRequired: false,
+        helpLink: 'https://mryslab.github.io/s3-extend/'
+
+    },
+    {
+        name: 'OneGpio Picoboard',
+        extensionId: 'onegpioPicoboard',
+        collaborator: "Mr. Y's Lab",
+        iconURL: onegpioPicoboardImage,
+        insetIconURL: onegpioPicoboardInsetIconURL,
+        description: 'OneGPIOPicoboard',
+        tags: ['othermod', 'hardware'],
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: true,
+        bluetoothRequired: false,
+        helpLink: 'https://mryslab.github.io/s3-extend/'
+
+    },
+    {
+        name: 'OneGpio Playground Express',
+        extensionId: 'onegpioCpx',
+        collaborator: "Mr. Y's Lab",
+        iconURL: onegpioCpxImage,
+        insetIconURL: onegpioCpxInsetIconURL,
+        description: 'OneGPIOCpx',
+        tags: ['othermod', 'hardware'],
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: true,
+        bluetoothRequired: false,
+        helpLink: 'https://mryslab.github.io/s3-extend/'
+
+    },
+    {
+        name: 'OneGpio RoboHAT MM1',
+        extensionId: 'onegpioRoboHAT',
+        collaborator: "Mr. Y's Lab",
+        iconURL: onegpioRoboHATImage,
+        insetIconURL: onegpioRoboHATInsetIconURL,
+        description: 'OneGPIORoboHAT',
+        tags: ['othermod', 'hardware'],
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: true,
+        bluetoothRequired: false,
+        helpLink: 'https://mryslab.github.io/s3-extend/'
+
+    },
+    {
+        name: 'OneGpio Raspberry Pi Pico',
+        extensionId: 'onegpioRpiPico',
+        collaborator: "Mr. Y's Lab",
+        iconURL: onegpioRpiPicoImage,
+        insetIconURL: onegpioRpiPicoInsetIconURL,
+        description: 'onegpioRpiPico',
+        tags: ['othermod', 'hardware'],
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: true,
+        bluetoothRequired: false,
+        helpLink: 'https://mryslab.github.io/s3-extend/'
+
+    },
+    {
         name: 'Callum\'s Ultimate Gallery',
         href: 'https://gallery.callumjt.dev/',
         extensionId: 'special_callumExtensionLibrary',
@@ -1127,7 +1319,7 @@ const menuItems = [
     },
     {
         name: 'SharkPool\'s Extension Collection',
-        href: 'https://sharkpools-extensions.vercel.app/?originPM=true',
+        href: 'https://sharkpools-extensions.vercel.app/',
         extensionId: 'special_sharkpoolExtensionLibrary',
         iconURL: sharkpoolGalleryIcon,
         description: 'Tons of extensions created by SharkPool.\n\nClick on an extension while this menu is open to add it to your project.',

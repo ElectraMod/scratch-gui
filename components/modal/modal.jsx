@@ -20,7 +20,9 @@ const ModalComponent = props => (
             [styles.fullScreen]: props.fullScreen
         })}
         contentLabel={props.contentLabel}
-        overlayClassName={styles.modalOverlay}
+        overlayClassName={classNames(styles.modalOverlay, {
+            [styles.scrollable]: props.scrollable
+        })}
         onRequestClose={props.onRequestClose}
     >
         <Box
@@ -106,7 +108,8 @@ ModalComponent.propTypes = {
     headerImage: PropTypes.string,
     isRtl: PropTypes.bool,
     onHelp: PropTypes.func,
-    onRequestClose: PropTypes.func
+    onRequestClose: PropTypes.func,
+    scrollable: PropTypes.bool
 };
 
 export default ModalComponent;

@@ -19,6 +19,7 @@ import DropAreaHOC from '../lib/drop-area-hoc.jsx';
 
 import {connect} from 'react-redux';
 import storage from '../lib/storage';
+import downloadBlob from '../lib/download-blob';
 import VM from 'scratch-vm';
 
 const dragTypes = [DragConstants.COSTUME, DragConstants.SOUND, DragConstants.SPRITE];
@@ -39,6 +40,7 @@ class Backpack extends React.Component {
             'handleDrop',
             'handleToggle',
             'handleDelete',
+            'handleExport',
             'handleRename',
             'getBackpackAssetURL',
             'getContents',
@@ -174,6 +176,24 @@ class Backpack extends React.Component {
                 });
         });
     }
+    handleExport (id) {
+        const item = this.findItemById(id);
+        if (!item) return;
+        if (!item.bodyData) return;
+
+        const buffer = item.bodyData;
+        const blob = new Blob([buffer], { type: item.mime });
+
+        let recommendedName = item.name;
+        if (item.type === 'sprite') {
+            recommendedName += '.pms';
+        }
+        if (item.type === 'script') {
+            recommendedName += '.pmb';
+        }
+
+        downloadBlob(recommendedName, blob);
+    }
     findItemById (id) {
         return this.state.contents.find(i => i.id === id);
     }
@@ -270,6 +290,7 @@ class Backpack extends React.Component {
                 loading={this.state.loading}
                 showMore={this.state.moreToLoad}
                 onDelete={this.handleDelete}
+                onExport={this.handleExport}
                 onRename={this.handleRename}
                 onDrop={this.handleDrop}
                 onMore={this.handleMore}

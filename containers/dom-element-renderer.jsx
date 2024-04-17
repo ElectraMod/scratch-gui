@@ -22,7 +22,7 @@ class DOMElementRenderer extends React.Component {
         this.container.appendChild(this.props.domElement);
     }
     componentWillUnmount () {
-        if (this.props.domElement.parentNode !== this.container.childNodes[0]) return console.error('i dont fucking know how to solve this, all i know is the site just fucking keeps dieing with this exact issue');
+        if (this.props.domElement.parentNode !== this.container.childNodes[0]) return console.error('idk how to solve this, all i know is the site just keeps dieing with this exact issue');
         this.container.removeChild(this.props.domElement);
     }
     setContainer (c) {

@@ -37,6 +37,7 @@ const TRUSTED_LOADEXT_ORIGINS = [
     'https://studio.penguinmod.com', // for development
     'https://extensions.penguinmod.com',
     'https://sharkpools-extensions.vercel.app',
+    'https://raw.githubusercontent.com/SharkPool-SP/SharkPools-Extensions/main', // Some people cant connect to vercel
     'https://pen-group.github.io',
 ];
 

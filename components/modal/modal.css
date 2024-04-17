@@ -11,6 +11,9 @@
     z-index: $z-index-modal;
     background-color: $ui-modal-overlay;
 }
+.scrollable {
+    overflow: auto;
+}
 
 .modal-content * {
     box-sizing: border-box;

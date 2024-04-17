@@ -180,8 +180,20 @@ export default async function ({ addon, msg, console }) {
     // Create the new previews
     queryPreviews.length = 0;
     let y = 0;
+    let addedResults = 0;
+    const addedIds = [];
+
+    const maxSearchResults = addon.settings.get('popup_max_search');
+    const maxVariants = addon.settings.get("popup_max_variants");
     for (let resultIdx = 0; resultIdx < blockList.length; resultIdx++) {
+      if (addedResults >= maxSearchResults) break;
+
       const result = blockList[resultIdx];
+      if (maxVariants <= 1) {
+        if (addedIds.includes(result.block.typeInfo.id)) continue;
+      } else {
+        if (addedIds.filter(id => id === result.block.typeInfo.id).length >= maxVariants) continue;
+      }
 
       const mouseMoveListener = () => {
         updateSelection(resultIdx);
@@ -225,6 +237,8 @@ export default async function ({ addon, msg, console }) {
       });
 
       y += height;
+      addedResults++;
+      addedIds.push(result.block.typeInfo.id);
     }
 
     const height = (y + 8) * previewScale;

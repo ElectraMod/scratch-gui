@@ -29,10 +29,8 @@ class UsernameModal extends React.Component {
             'handleWarpTimerChange',
             'handleStageWidthChange',
             'handleStageHeightChange',
-            'handleStagePresetUsed',
             'handleDisableCompilerChange',
-            'handleStoreProjectOptions',
-            'handleEnableDangerousOptimizationsChange'
+            'handleStoreProjectOptions'
         ]);
     }
     handleFramerateChange (e) {
@@ -68,12 +66,6 @@ class UsernameModal extends React.Component {
             miscLimits: !e.target.checked
         });
     }
-    handleEnableDangerousOptimizationsChange (e) {
-        console.log(e.target.checked);
-        this.props.vm.setRuntimeOptions({
-            dangerousOptimizations: e.target.checked
-        });
-    }
     handleWarpTimerChange (e) {
         this.props.vm.setCompilerOptions({
             warpTimer: e.target.checked
@@ -89,13 +81,6 @@ class UsernameModal extends React.Component {
     }
     handleStageHeightChange (value) {
         this.props.vm.setStageSize(this.props.customStageSize.width, value);
-    }
-    handleStagePresetUsed (widescreen) {
-        if (widescreen) {
-            this.props.vm.setStageSize(640, 360);
-            return;
-        }
-        this.props.vm.setStageSize(480, 360);
     }
     handleStoreProjectOptions () {
         this.props.vm.storeProjectOptions();
@@ -118,11 +103,9 @@ class UsernameModal extends React.Component {
                 onInfiniteClonesChange={this.handleInfiniteClonesChange}
                 onRemoveFencingChange={this.handleRemoveFencingChange}
                 onRemoveLimitsChange={this.handleRemoveLimitsChange}
-                onEnableDangerousOptimizationsChange={this.handleEnableDangerousOptimizationsChange}
                 onWarpTimerChange={this.handleWarpTimerChange}
                 onStageWidthChange={this.handleStageWidthChange}
                 onStageHeightChange={this.handleStageHeightChange}
-                onStagePresetUsed={this.handleStagePresetUsed}
                 onDisableCompilerChange={this.handleDisableCompilerChange}
                 stageWidth={this.props.customStageSize.width}
                 stageHeight={this.props.customStageSize.height}
@@ -158,7 +141,6 @@ UsernameModal.propTypes = {
     infiniteClones: PropTypes.bool,
     removeFencing: PropTypes.bool,
     removeLimits: PropTypes.bool,
-    dangerousOptimizations: PropTypes.bool,
     warpTimer: PropTypes.bool,
     customStageSize: PropTypes.shape({
         width: PropTypes.number,
@@ -176,7 +158,6 @@ const mapStateToProps = state => ({
     infiniteClones: state.scratchGui.tw.runtimeOptions.maxClones === Infinity,
     removeFencing: !state.scratchGui.tw.runtimeOptions.fencing,
     removeLimits: !state.scratchGui.tw.runtimeOptions.miscLimits,
-    dangerousOptimizations: state.scratchGui.tw.runtimeOptions.dangerousOptimizations,
     warpTimer: state.scratchGui.tw.compilerOptions.warpTimer,
     customStageSize: state.scratchGui.customStageSize,
     disableCompiler: !state.scratchGui.tw.compilerOptions.enabled

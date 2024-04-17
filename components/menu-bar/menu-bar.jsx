@@ -307,6 +307,36 @@ class MenuBar extends React.Component {
             this.props.onClickLanguage(e);
         }
     }
+
+    handleClickMode(effect) {
+        const body = document.body;
+        body.style = '';
+        if (!effect) return;
+        
+        // fix some weird sizing, just applies on effects
+        body.style = "width:100%;height:100%;position:fixed;overflow:hidden;";
+        switch (effect) {
+            case 'night':
+                body.style.filter = 'brightness(90%) sepia(100%) hue-rotate(340deg) saturate(400%)';
+                break;
+            case 'blur':
+                body.style.filter = 'blur(4px)';
+                break;
+            case 'comic':
+                body.style.filter = 'brightness(70%) contrast(1000%) grayscale(100%)';
+                break;
+            case 'toxic':
+                body.style.filter = 'sepia(100%) hue-rotate(58deg) saturate(400%)';
+                break;
+            case 'uhd':
+                body.style.filter = 'url("./bloomfilter.svg#bloom")';
+                break;
+            case 'upsidedown':
+                body.style.transform = 'rotateX(180deg) rotateY(180deg)';
+                break;
+        }
+    }
+
     restoreOptionMessage(deletedItem) {
         switch (deletedItem) {
             case 'Sprite':
