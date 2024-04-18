@@ -131,7 +131,7 @@
     "lodash.defaultsdeep": "4.6.1",
     "mkdirp": "1.0.3",
     "raf": "3.4.1",
-    "react-test-renderer": "16.2.0",
+    "react-test-renderer": "16.14.0",
     "redux-mock-store": "1.5.3",
     "rimraf": "2.7.1",
     "selenium-webdriver": "4.19.0",
