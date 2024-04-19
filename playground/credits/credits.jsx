@@ -54,18 +54,18 @@ const Credits = () => (
     <main className={styles.main}>
         <header className={styles.headerContainer}>
             <h1 className={styles.headerText}>
-                PenguinMod Credits
+                ElectraMod Credits
             </h1>
         </header>
         <section>
-            <h1>PenguinMod</h1>
+            <h1>ElectraMod</h1>
         </section>
         <section>
             <h2>Thank you</h2>
             <p>
-                Without TurboWarp, PenguinMod may have never existed.
-                Thank you to everyone who worked on Scratch and TurboWarp,
-                you have made many people finally be able to make whatever they can imagine.
+            Without TurboWarp and PenguinMod, Snail IDE, Gandi IDE, ElectraMod may have never existed.
+             Thank you to everyone who worked on Scratch, TurboWarp, PenguinMod? Snail IDE and Gandi IDE 
+             you have made many people finally be able to make whatever they can imagine.
             </p>
             <a href="https://scratch.mit.edu/donate">
                 Donate to support Scratch.
@@ -74,10 +74,23 @@ const Credits = () => (
             <a href="https://github.com/sponsors/GarboMuffin">
                 Donate to support TurboWarp.
             </a>
+            <br></br><br></br>
+            <a href="https://penguinmod.com/donate">
+                Donate to support PenguinMod.
+            </a>
             <h2>Contributors</h2>
             <p>
-                PenguinMod is made by a small bunch of developers.
-                A list is below, but you can also check <a href="https://github.com/orgs/PenguinMod/people">our GitHub</a> incase this one is out of date.
+                ElectraMod is made by a small bunch of developers.
+                A list is below, but you can also check <a href="https://github.com/orgs/ElectraMod/people">our GitHub</a> incase this one is out of date.
+            </p>
+            <UserList users={UserData.emDevelopers} />
+            <p><i>The list order is randomized on each refresh.</i></p>
+            <p>There are even community members who have helped develop ElectraMod. People like <i>you!</i></p>
+            <UserList users={UserData.emPullRequestDevelopers} />
+            <p><i>The list order is randomized on each refresh.</i></p>
+
+            <p>
+            ♥ Without PenguinMod, ElectraMod would never exist, here the PenguinMod Dev Team is listed ♥ A list is below, but you can also check their GitHub incase this one is out of date. But not all devs are listed there.
             </p>
             <UserList users={UserData.pmDevelopers} />
             <p><i>The list order is randomized on each refresh.</i></p>
@@ -86,16 +99,16 @@ const Credits = () => (
             <p><i>The list order is randomized on each refresh.</i></p>
         </section>
         <section>
-            <h2>GitHub Pages</h2>
-            <p>We currently use <a href="https://pages.github.com/">GitHub Pages</a> to host PenguinMod.</p>
-            <a href="https://pages.github.com/">
+            <h2>Vercel</h2>
+            <p>We currently use <a href="https://vercel.com/">Vercel</a> to host ElectraMod.</p>
+            <a href="https://vercel.com/">
                 <img
-                    src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/collections/github-pages-examples/github-pages-examples.png"
+                    src="https://raw.githubusercontent.com/github/explore/3c66f1237835e0b877190fbea528d0ebece7bccf/topics/vercel/vercel.png"
                     width="160"
                     height="160"
                 />
             </a>
-            <h2>Domain Provider</h2>
+            {/* <h2>Domain Provider</h2>
             <p>
                 <a href="https://penguinmod.com">penguinmod.com</a> (and any subdomains) are currently
                 provided by <a href="https://github.com/enderhacker">NotHouse</a>.
@@ -118,9 +131,10 @@ const Credits = () => (
             </p>
             <UserList users={UserData.pmApiDevelopers} />
             <p><i>The list order is randomized on each refresh.</i></p>
+            */}
             <h2>Sound Effects</h2>
             <p>
-                PenguinMod has added some more sounds to the Sound Library.
+                PenguinMod (not ElectraMod) has added some more sounds to the Sound Library.
                 All PenguinMod sounds are
                 from <a href="https://freesound.org/">https://freesound.org/</a> and <a href="https://archive.org/">https://archive.org/</a> under
                 Public Domain licenses.
@@ -140,19 +154,19 @@ const Credits = () => (
                 <br />
                 <br />
                 <i>
-                    PenguinMod is also not owned or managed by Looky1173, please only comment on his profile
+                    ElectraMod is also not owned or managed by Looky1173, please only comment on his profile
                     <br />
                     if the Scratch Auth page tells you that it failed, not if PenguinMod fails to load.
                 </i>
             </p>
         </section>
         <section>
-            <h1>PenguinMod & TurboWarp</h1>
+            <h1>ElectraMod, PenguinMod & TurboWarp</h1>
         </section>
         <section>
             <h2>Extensions</h2>
             <p><i>
-                If you are an extension developer who wants their extension removed from PenguinMod's extensions list,
+                If you are an extension developer who wants their extension removed from ElectraMod's extensions list,
                 contact us as soon as you can. We'll get it removed as soon as we are able to.
             </i></p>
             <p>
@@ -162,12 +176,13 @@ const Credits = () => (
                 Check them out below:
             </p>
             <UserList users={UserData.extensionDevelopers} />
+            <UserList users={UserData.pmExtensionDevelopers} />
             <p><i>The list order is randomized on each refresh.</i></p>
             <p>
-                PenguinMod also has a few people who made and submitted extensions too!
+                ElectraMod also has a few people who made and submitted extensions too!
                 This list may get outdated sometimes, but here they are listed below:
             </p>
-            <UserList users={UserData.pmExtensionDevelopers} />
+            <UserList users={UserData.emExtensionDevelopers} />
             <p><i>The list order is randomized on each refresh.</i></p>
         </section>
         <section>

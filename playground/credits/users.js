@@ -146,6 +146,24 @@ const pmPullRequestDevelopers = [
     // add more people probably
 ].map(fromHardcodedGithub);
 
+const emDevelopers = [
+    'Aness6040',
+    'AshimeeAlt',
+    'CharcoalAfterlife',
+    'cicerorph',
+    'FurryR',
+    'lego7set',
+    'Mistium'
+].map(fromHardcodedGithub);
+
+const emPullRequestDevelopers = [
+    'Ianyourgod',
+    'RedMan13',
+    'jwklong'
+    // add more people probably
+].map(fromHardcodedGithub);
+
+
 const pmApiDevelopers = [
     'JeremyGamer13',
     'RedMan13',
@@ -362,8 +380,7 @@ const pmExtensionDevelopers = [
     'MikeDev101',
     'BopShoes',
     'AlexSchoolOH',
-    'Monochromasity',
-    'LilyMakesThings',
+    'Monochromasity',   
     'TheShovel',
     'skyhigh173',
     'Ruby-Devs',
@@ -373,13 +390,39 @@ const pmExtensionDevelopers = [
     'Ashimee'
 ].map(fromHardcodedGithub);
 
+const emExtensionDevelopers = [
+    {
+        text: 'Aness6040',
+        image: `https://avatars.githubusercontent.com/u/96918407?v=4`,
+        href: "https://github.com/Aness6040",
+    },
+    {
+        text: 'MubiLop',
+        image: `https://trampoline.turbowarp.org/avatars/by-username/MubiLop`,
+        href: "https://penguinmod.com/profile?user=MubiLop",
+    },
+    {
+        text: 'Jul Mik',
+        image: `https://trampoline.turbowarp.org/avatars/by-username/julmik6478`,
+        href: "https://scratch.mit.edu/users/julmik6478/",
+    },
+    {
+        text: 'MikeDev101',
+        image: `https://avatars.githubusercontent.com/u/12957745?v=4`,
+        href: "https://github.com/MikeDev101/",
+    },
+];
+
 export default {
     addonDevelopers: shuffle(addonDevelopers),
     pmDevelopers: shuffle(pmDevelopers),
+    emDevelopers: shuffle(emDevelopers),
     logoArtists: shuffle(logoArtists),
     extensionDevelopers: shuffle(extensionDevelopers),
     pmExtensionDevelopers: shuffle(pmExtensionDevelopers),
+    emExtensionDevelopers: shuffle(emExtensionDevelopers),
     pmApiDevelopers: shuffle(pmApiDevelopers),
     pmTranslators: shuffle(pmTranslators),
-    pmPullRequestDevelopers: shuffle(pmPullRequestDevelopers)
+    pmPullRequestDevelopers: shuffle(pmPullRequestDevelopers),
+    emPullRequestDevelopers: shuffle(emPullRequestDevelopers)
 };
