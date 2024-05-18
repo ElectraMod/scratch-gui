@@ -363,6 +363,21 @@ const menuItems = [
         credits: 'Inspired by⠀⠀⠀⠀⠀⠀ DT-is-not-available',
         featured: true
     },
+        {
+        name: 'Timezones Beta',
+        extensionId: 'pmCamera',
+        iconURL: pmCameraExtensionIcon,
+        tags: ['penguinmod'],
+        description: (
+            <FormattedMessage
+                defaultMessage="View Timezones."
+                description="The description for the PenguinMod Camera extension."
+                id="pm.extension.camera.description"
+            />
+        ),
+        credits: 'Created By ⠀⠀⠀⠀ Legume',
+        featured: true
+    },
     {
         name: 'Files',
         extensionId: 'twFiles',
