@@ -185,3 +185,12 @@
 [theme="dark"] .warning {
     background: rgb(114, 102, 0);
 }
+.scrollContainer {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.scrollContent {
+    display: inline-flex;
+    gap: 10px;
+}
