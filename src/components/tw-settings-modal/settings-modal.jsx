@@ -417,6 +417,7 @@ const CustomStageSize = ({
             (stageWidth >= 1000 || stageHeight >= 1000) && (
                 <div className={styles.warning}>
                     <FormattedMessage
+                        // eslint-disable-next-line max-len
                         defaultMessage="Using a custom stage size this large is not recommended! Instead, use a lower size with the same aspect ratio and let fullscreen mode upscale it to match the user's display."
                         description="Warning about using stages that are too large in settings modal"
                         id="tw.settingsModal.largeStageWarning"
@@ -427,6 +428,7 @@ const CustomStageSize = ({
         }
         help={(
             <FormattedMessage
+                // eslint-disable-next-line max-len
                 defaultMessage="Changes the size of the Scratch stage from 480x360 to something else. Try 640x360 to make the stage widescreen. Very few projects will handle this properly."
                 description="Custom Stage Size option"
                 id="tw.settingsModal.customStageSizeHelp"
