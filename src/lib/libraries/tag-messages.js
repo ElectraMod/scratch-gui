@@ -206,6 +206,11 @@ export default defineMessages({
         description: 'Button that loads a custom extension.',
         id: 'gui.libraryTags.customextension'
     },
+    extensionmanager: {
+        defaultMessage: 'Manage Loaded Extensions',
+        description: 'Button that lets you manage extensions in the project.',
+        id: 'gui.libraryTags.extensionmanager'
+    },
     hardware: {
         defaultMessage: 'Hardware',
         description: 'Tag for filtering a library by hardware.',
