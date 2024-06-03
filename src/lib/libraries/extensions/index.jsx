@@ -1365,7 +1365,7 @@ const menuItems = [
         iconURL: ElectraBuilderIcon,
         insetIconURL: ElectraBuilderInset,
         description: 'ElectraMod version of TurboBuilder',
-        credits: 'Started by JeremyGamer13, continued by jwklong, modified by Aness6040',
+        credits: 'Started by JeremyGamer13, continued by jwklong, modified by Aness6040 and Lego7set',
         tags: ['builders', 'extcreate', 'electramod'],
         featured: true
     },
