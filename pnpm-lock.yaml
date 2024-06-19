@@ -215,9 +215,6 @@ dependencies:
   xhr:
     specifier: 2.5.0
     version: 2.5.0
-  xterm:
-    specifier: ^5.3.0
-    version: 5.3.0
 
 devDependencies:
   '@babel/cli':
@@ -4006,7 +4003,7 @@ packages:
       node-fetch: 2.7.0
       ws: 7.5.9
     optionalDependencies:
-      register-scheme: github.com/devsnek/node-register-scheme/e7cc9a63a1f512565da44cb57316d9fb10750e17
+      register-scheme: git@github.com+devsnek/node-register-scheme/e7cc9a63a1f512565da44cb57316d9fb10750e17
     transitivePeerDependencies:
       - bufferutil
       - encoding
@@ -9096,7 +9093,6 @@ packages:
       prop-types: 15.8.1
       react: 16.14.0
       scheduler: 0.19.1
-    bundledDependencies: false
 
   /react-draggable@3.0.5(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-qo76q6+pafyGllbmfc+CgWfOkwY9v3UoJa3jp6xG2vdsRY8uJTN1kqNievLj0uVNjEqCvZ0OFiEBxlAJNj3OTg==}
@@ -9273,7 +9269,6 @@ packages:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       prop-types: 15.8.1
-    bundledDependencies: false
 
   /read-cache@1.0.0:
     resolution: {integrity: sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==}
@@ -11314,7 +11309,7 @@ packages:
       webpack-cli: 3.3.12(webpack@4.46.0)
       webpack-dev-middleware: 3.7.3(webpack@4.46.0)
       webpack-log: 2.0.0
-      ws: 6.2.2
+      ws: 6.2.3
       yargs: 13.3.2
     transitivePeerDependencies:
       - bufferutil
@@ -11522,8 +11517,8 @@ packages:
       mkdirp: 0.5.6
     dev: true
 
-  /ws@6.2.2:
-    resolution: {integrity: sha512-zmhltoSR8u1cnDsD43TX59mzoMZsLKqUweyYBAIvTngR3shc0W6aOZylZmq/7hqyVxPdi+5Ud2QInblgyE72fw==}
+  /ws@6.2.3:
+    resolution: {integrity: sha512-jmTjYU0j60B+vHey6TfR3Z7RD61z/hmxBS3VMSGIrroOWXQEneK1zNuotOUrGyBHQj0yrpsLHPWtigEFd13ndA==}
     peerDependencies:
       bufferutil: ^4.0.1
       utf-8-validate: ^5.0.2
@@ -11582,11 +11577,6 @@ packages:
   /xtend@4.0.2:
     resolution: {integrity: sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==}
     engines: {node: '>=0.4'}
-
-  /xterm@5.3.0:
-    resolution: {integrity: sha512-8QqjlekLUFTrU6x7xck1MsPzPA571K5zNqWm0M0oroYEWVOptZ0+ubQSkQ3uxIEhcIHRujJy6emDWX4A7qyFzg==}
-    deprecated: This package is now deprecated. Move to @xterm/xterm instead.
-    dev: false
 
   /y18n@3.2.2:
     resolution: {integrity: sha512-uGZHXkHnhF0XeeAPgnKfPv1bgKAYyVvmNL1xlKsPYZPaIHxGti2hHqvOCQv71XMsLxu1QjergkqogUnms5D3YQ==}
@@ -11672,6 +11662,47 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
+  git@github.com+PenguinMod/PenguinMod-Parser/c56c7aad93f71aa5d1a126bae1d5e663c161e8eb:
+    resolution: {commit: c56c7aad93f71aa5d1a126bae1d5e663c161e8eb, repo: git@github.com:PenguinMod/PenguinMod-Parser.git, type: git}
+    name: scratch-parser
+    version: 0.0.0-development
+    engines: {node: '>=8.0'}
+    dependencies:
+      '@turbowarp/json': 0.1.2
+      ajv: 6.3.0
+      jszip: 3.1.5
+      pify: 4.0.1
+    dev: false
+
+  git@github.com+TurboWarp/scratch-svg-renderer/d75e5c5a736741b31ad6aca02b2ae6ed631c4a1c(scratch-render-fonts@1.0.0):
+    resolution: {commit: d75e5c5a736741b31ad6aca02b2ae6ed631c4a1c, repo: git@github.com:TurboWarp/scratch-svg-renderer.git, type: git}
+    id: git@github.com+TurboWarp/scratch-svg-renderer/d75e5c5a736741b31ad6aca02b2ae6ed631c4a1c
+    name: '@turbowarp/scratch-svg-renderer'
+    version: 1.0.0
+    peerDependencies:
+      scratch-render-fonts: github:TurboWarp/scratch-render-fonts#master
+    dependencies:
+      '@turbowarp/nanolog': 0.2.0
+      base64-js: 1.2.1
+      base64-loader: 1.0.0
+      css-tree: 1.1.3
+      dompurify: 2.2.7
+      fastestsmallesttextencoderdecoder: 1.0.22
+      scratch-render-fonts: github.com/ElectraMod/scratch-render-fonts/2d494863509572246aa3bb37628273e88c2b4f39
+      transformation-matrix: 1.15.0
+    dev: false
+
+  git@github.com+devsnek/node-register-scheme/e7cc9a63a1f512565da44cb57316d9fb10750e17:
+    resolution: {commit: e7cc9a63a1f512565da44cb57316d9fb10750e17, repo: git@github.com:devsnek/node-register-scheme.git, type: git}
+    name: register-scheme
+    version: 0.0.2
+    requiresBuild: true
+    dependencies:
+      bindings: 1.5.0
+      node-addon-api: 1.7.2
+    dev: false
+    optional: true
+
   github.com/ElectraMod/scratch-blocks/b4b8132f7c4cc680fc145c6575a2623af116af10:
     resolution: {tarball: https://codeload.github.com/ElectraMod/scratch-blocks/tar.gz/b4b8132f7c4cc680fc145c6575a2623af116af10}
     name: scratch-blocks
@@ -11752,7 +11783,7 @@ packages:
       mersenne-twister: 1.1.0
       minilog: 3.1.0
       pathfinding: 0.4.18
-      scratch-parser: github.com/PenguinMod/PenguinMod-Parser/c56c7aad93f71aa5d1a126bae1d5e663c161e8eb
+      scratch-parser: git@github.com+PenguinMod/PenguinMod-Parser/c56c7aad93f71aa5d1a126bae1d5e663c161e8eb
       scratch-sb1-converter: 0.2.7
       scratch-svg-renderer: github.com/TurboWarp/scratch-svg-renderer/62fe825405a451ab981c33d601d5c6c3581ced69(scratch-render-fonts@1.0.0)
       scratch-translate-extension-languages: 0.0.20191118205314
@@ -11805,18 +11836,6 @@ packages:
       slugo: 0.2.3
     dev: false
 
-  github.com/PenguinMod/PenguinMod-Parser/c56c7aad93f71aa5d1a126bae1d5e663c161e8eb:
-    resolution: {tarball: https://codeload.github.com/PenguinMod/PenguinMod-Parser/tar.gz/c56c7aad93f71aa5d1a126bae1d5e663c161e8eb}
-    name: scratch-parser
-    version: 0.0.0-development
-    engines: {node: '>=8.0'}
-    dependencies:
-      '@turbowarp/json': 0.1.2
-      ajv: 6.3.0
-      jszip: 3.1.5
-      pify: 4.0.1
-    dev: false
-
   github.com/PenguinMod/PenguinMod-Render/f73221d7efde3d39077470ecb5431bf9a6a33a53(scratch-render-fonts@1.0.0):
     resolution: {tarball: https://codeload.github.com/PenguinMod/PenguinMod-Render/tar.gz/f73221d7efde3d39077470ecb5431bf9a6a33a53}
     id: github.com/PenguinMod/PenguinMod-Render/f73221d7efde3d39077470ecb5431bf9a6a33a53
@@ -11832,7 +11851,7 @@ packages:
       minilog: 3.1.0
       raw-loader: 0.5.1
       scratch-render-fonts: github.com/ElectraMod/scratch-render-fonts/2d494863509572246aa3bb37628273e88c2b4f39
-      scratch-svg-renderer: github.com/TurboWarp/scratch-svg-renderer/179d88810b6a3c581d2d9d0f924dc0ab1e0d0b82(scratch-render-fonts@1.0.0)
+      scratch-svg-renderer: git@github.com+TurboWarp/scratch-svg-renderer/d75e5c5a736741b31ad6aca02b2ae6ed631c4a1c(scratch-render-fonts@1.0.0)
       twgl.js: 4.4.0
     dev: false
 
@@ -11852,24 +11871,6 @@ packages:
       - webpack
     dev: false
 
-  github.com/TurboWarp/scratch-svg-renderer/179d88810b6a3c581d2d9d0f924dc0ab1e0d0b82(scratch-render-fonts@1.0.0):
-    resolution: {tarball: https://codeload.github.com/TurboWarp/scratch-svg-renderer/tar.gz/179d88810b6a3c581d2d9d0f924dc0ab1e0d0b82}
-    id: github.com/TurboWarp/scratch-svg-renderer/179d88810b6a3c581d2d9d0f924dc0ab1e0d0b82
-    name: '@turbowarp/scratch-svg-renderer'
-    version: 1.0.0
-    peerDependencies:
-      scratch-render-fonts: github:TurboWarp/scratch-render-fonts#master
-    dependencies:
-      '@turbowarp/nanolog': 0.2.0
-      base64-js: 1.2.1
-      base64-loader: 1.0.0
-      css-tree: 1.1.3
-      dompurify: 2.2.7
-      fastestsmallesttextencoderdecoder: 1.0.22
-      scratch-render-fonts: github.com/ElectraMod/scratch-render-fonts/2d494863509572246aa3bb37628273e88c2b4f39
-      transformation-matrix: 1.15.0
-    dev: false
-
   github.com/TurboWarp/scratch-svg-renderer/62fe825405a451ab981c33d601d5c6c3581ced69(scratch-render-fonts@1.0.0):
     resolution: {tarball: https://codeload.github.com/TurboWarp/scratch-svg-renderer/tar.gz/62fe825405a451ab981c33d601d5c6c3581ced69}
     id: github.com/TurboWarp/scratch-svg-renderer/62fe825405a451ab981c33d601d5c6c3581ced69
@@ -11887,14 +11888,3 @@ packages:
       scratch-render-fonts: github.com/ElectraMod/scratch-render-fonts/2d494863509572246aa3bb37628273e88c2b4f39
       transformation-matrix: 1.15.0
     dev: false
-
-  github.com/devsnek/node-register-scheme/e7cc9a63a1f512565da44cb57316d9fb10750e17:
-    resolution: {tarball: https://codeload.github.com/devsnek/node-register-scheme/tar.gz/e7cc9a63a1f512565da44cb57316d9fb10750e17}
-    name: register-scheme
-    version: 0.0.2
-    requiresBuild: true
-    dependencies:
-      bindings: 1.5.0
-      node-addon-api: 1.7.2
-    dev: false
-    optional: true
